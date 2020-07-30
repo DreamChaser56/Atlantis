@@ -2718,12 +2718,12 @@ ul.nav.nav-tabs > li.active a {
 }
 
 .swin-sc-isotope .grid-item .view-lightbox {
-    margin-left: 5px;
+    margin-left: 0px;
     transition-delay: 0.2s;
 }
 
 .swin-sc-isotope .grid-item .view-more {
-    margin-right: 5px;
+    margin-right: 0px;
     transition-delay: 0.3s;
 }
 
@@ -2757,7 +2757,7 @@ ul.nav.nav-tabs > li.active a {
 
 .swin-sc-isotope .grid-item.grid-item-h2 {
     height: 660px;
-    width: 250px;
+    width: 200px;
 }
 
 .swin-sc-isotope .grid-item:hover {
