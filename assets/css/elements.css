@@ -2695,7 +2695,7 @@ ul.nav.nav-tabs > li.active a {
     z-index: 2;
     opacity: 0;
     top: 50%;
-    left: 50%;
+    left: 25%;
     margin-top: 20px;
     width: 35px;
     height: 35px;
@@ -2718,12 +2718,12 @@ ul.nav.nav-tabs > li.active a {
 }
 
 .swin-sc-isotope .grid-item .view-lightbox {
-    margin-left: -40px;
+    margin-left: -10px;
     transition-delay: 0.2s;
 }
 
 .swin-sc-isotope .grid-item .view-more {
-    margin-right: -40px;
+    margin-right: -10px;
     transition-delay: 0.3s;
 }
 
@@ -2757,7 +2757,7 @@ ul.nav.nav-tabs > li.active a {
 
 .swin-sc-isotope .grid-item.grid-item-h2 {
     height: 660px;
-    width: 200px;
+    width: 300px;
 }
 
 .swin-sc-isotope .grid-item:hover {
@@ -2770,13 +2770,13 @@ ul.nav.nav-tabs > li.active a {
 }
 
 .swin-sc-isotope .grid-item:hover .gallery-title {
-    margin-top: -40px;
+    margin-top: -50px;
     opacity: 1;
 }
 
 .swin-sc-isotope .grid-item:hover .view-lightbox,
 .swin-sc-isotope .grid-item:hover .view-more {
-    margin-top: 10px;
+    margin-top: -50px;
     opacity: 1;
     transition-delay: inherit;
 }
@@ -3394,7 +3394,7 @@ footer {
 .ft-fixed-area .reservation-box {
     color: #ccac00;
     background-color: #ffffff;
-    background-image: url("Picture/Picture25.jpg");
+    background-image: url("");
     background-size: cover;
     position: relative;
     top: -30px;
@@ -3402,7 +3402,7 @@ footer {
 }
 
 .ft-fixed-area .reservation-wrap {
-    border: 1px solid #ccac00
+    border: 1px solid #ccac00;
     padding: 10px 25px 25px;
     position: relative;
 }
@@ -3574,3 +3574,10 @@ footer {
 .pageload-overlay svg path {
     fill: #ccac00;
 }
+
+
+
+
+
+
+
