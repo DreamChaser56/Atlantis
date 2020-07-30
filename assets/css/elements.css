@@ -2718,12 +2718,12 @@ ul.nav.nav-tabs > li.active a {
 }
 
 .swin-sc-isotope .grid-item .view-lightbox {
-    margin-left: -10px;
+    margin-left: -5px;
     transition-delay: 0.2s;
 }
 
 .swin-sc-isotope .grid-item .view-more {
-    margin-right: -10px;
+    margin-right: -5px;
     transition-delay: 0.3s;
 }
 
