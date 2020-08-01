@@ -1240,8 +1240,8 @@ header.header-fixed #st-trigger-effects .st-btn-efect {
 }
 
 /* #Page Title */
-.page-title {
-    background-image: url("../images/background/pagetitle-bg.jpg");
+.page-title (
+    background-image: url("Pictures/Picture35.jpg");
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
