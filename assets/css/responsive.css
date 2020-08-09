@@ -926,7 +926,7 @@ This file include css code conrespond for table and mobile device
 /* #Mobile */
 @media screen and (max-width: 480px) {
     .top-header{
-        background-size: cover;
+        background-size: 100% 100%;
         background: url(/Atlantis_Video.mp4);
     }
     .header-sidebar .swin-trigger-effects.btn-close {
@@ -1201,7 +1201,7 @@ This file include css code conrespond for table and mobile device
 /* #Small Mobile */
 @media screen and (max-width: 320px) {
     .top-header{
-        background-size: cover;
+        background-size: 100% 100%;
         background: url(/Atlantis_Video.mp4);
     }
     .swin-sc-testimonial.style-1 .main-slider .testi-item {
