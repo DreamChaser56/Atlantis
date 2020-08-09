@@ -1209,7 +1209,7 @@ This file include css code conrespond for table and mobile device
     .top-header{
         background: url(/Atlantis_Video.mp4);
         background-repeat: no-repeat;
-        background-size: 50% 100%;
+        background-size: 50%;
     }
     .swin-sc-testimonial.style-1 .main-slider .testi-item {
         padding: 0 10px;
