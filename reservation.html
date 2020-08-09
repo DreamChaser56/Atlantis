@@ -27,6 +27,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/elements.css">
     <link rel="stylesheet" type="text/css" href="assets/css/extra.css">
     <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
+    <link rel="stylesheet" href="webform.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="main.js"></script>
     <!--link#colorpattern(rel='stylesheet', type='text/css', href='assets/css/color/colordefault.css')-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <!-- Google Font-->
@@ -92,6 +95,10 @@
             </div>
           </div>
           <div class="page-content-wrapper">
+            <section>
+              <script type="text/javascript" src="https://form.jotform.com/jsform/202104746934150"></script>
+            </section>
+            <!--
             <section class="section-reservation-form padding-top-100 padding-bottom-100">
               <div class="container">
                 <div class="section-content">
@@ -105,15 +112,15 @@
                       </div>
                     </div>
                     <div class="swin-sc swin-sc-contact-form light mtl">
-                      <form action="reservation.php" method="POST">
+                      <form action="1.php" method="POST">
                         <div class="form-group">
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                            <input name="name" type="text" placeholder="name" class="form-control">
+                            <input type="text" placeholder="name" class="form-control">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                            <input name="email" type="text" placeholder="Email" class="form-control">
+                            <input type="text" placeholder="Email" class="form-control">
                           </div>
                         </div>
                         <div class="form-group">
@@ -121,11 +128,11 @@
                             <div class="input-group-addon">
                               <div class="fa fa-phone"></div>
                             </div>
-                            <input name="phone" type="text" placeholder="Phone" class="form-control">
+                            <input type="text" placeholder="Phone" class="form-control">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                            <select type="text" name="people" placeholder="People" class="form-control">
+                            <select type="text" placeholder="People" class="form-control">
                               <option>1 person</option>
                               <option>2 People</option>
                               <option>3 People</option>
@@ -142,13 +149,13 @@
                         <div class="form-group">
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                            <input name="date" type="text" placeholder="Date" class="form-control datepicker">
+                            <input type="text" placeholder="Date" class="form-control datepicker">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon">
                               <div class="fa fa-clock-o"></div>
                             </div>
-                            <select name="time" type="text" placeholder="Time" class="form-control">
+                            <select type="text" placeholder="Time" class="form-control">
                               <option>7:00 AM</option>
                               <option>8:00 AM</option>
                               <option>9:00 AM</option>
@@ -169,7 +176,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <textarea name="message" class="form-control"></textarea>
+                          <textarea class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                           <div class="swin-btn-wrap center"><a href="#" class="swin-btn center form-submit"><button type="submit" name="submit"> <span>Book Table</span></button></a></div>
@@ -177,13 +184,7 @@
                       </form>
                     </div>
                   </div>
-                  <!--<div class="section-deco"><img src="assets/images/pages/reservation-showcase.png" alt="fooday" class="img-deco"></div>-->
-                </div>
-                <php if ($mail_reservation_status != '') {
-                  echo $mail_reservation_status;
-                }> 
-              </div>
-            </section>
+                  <div class="section-deco"><img src="assets/images/pages/reservation-showcase.png" alt="fooday" class="img-deco"></div>-->
 
             <!--
             <section>
