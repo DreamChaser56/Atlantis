@@ -642,8 +642,9 @@ This file include css code conrespond for table and mobile device
 /* #Mobile Lanscape */
 @media screen and (max-width: 700px) {
     .top-header{
-        background-size: contain;
-        background: url(/Pictures/Picture33.jpg);
+        background: url(/Atlantis_Video.mp4);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .top-slider .slide-bg {
         height: 600px;
@@ -930,8 +931,9 @@ This file include css code conrespond for table and mobile device
 /* #Mobile */
 @media screen and (max-width: 480px) {
     .top-header{
-        background-size: contain;
-        background: url(/Pictures/Picture33.jpg);
+        background: url(/Atlantis_Video.mp4);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .header-sidebar .swin-trigger-effects.btn-close {
         margin-top: 0;
@@ -1205,8 +1207,9 @@ This file include css code conrespond for table and mobile device
 /* #Small Mobile */
 @media screen and (max-width: 320px) {
     .top-header{
-        background-size: contain;
-        background: url(/Pictures/Picture33.jpg);
+        background: url(/Atlantis_Video.mp4);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .swin-sc-testimonial.style-1 .main-slider .testi-item {
         padding: 0 10px;
