@@ -644,7 +644,7 @@ This file include css code conrespond for table and mobile device
     .top-header{
         background: url(/Atlantis_Video.mp4);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
     .top-slider .slide-bg {
         height: 600px;
@@ -933,7 +933,7 @@ This file include css code conrespond for table and mobile device
     .top-header{
         background: url(/Atlantis_Video.mp4);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
     .header-sidebar .swin-trigger-effects.btn-close {
         margin-top: 0;
@@ -1209,7 +1209,7 @@ This file include css code conrespond for table and mobile device
     .top-header{
         background: url(/Atlantis_Video.mp4);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
     .swin-sc-testimonial.style-1 .main-slider .testi-item {
         padding: 0 10px;
