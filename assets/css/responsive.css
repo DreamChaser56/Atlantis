@@ -642,7 +642,7 @@ This file include css code conrespond for table and mobile device
 /* #Mobile Lanscape */
 @media screen and (max-width: 700px) {
     .top-header{
-        background-size: cover;
+        background-size: contain;
         background: url(/Pictures/Picture33.jpg);
     }
     .top-slider .slide-bg {
@@ -930,7 +930,7 @@ This file include css code conrespond for table and mobile device
 /* #Mobile */
 @media screen and (max-width: 480px) {
     .top-header{
-        background-size: cover;
+        background-size: contain;
         background: url(/Pictures/Picture33.jpg);
     }
     .header-sidebar .swin-trigger-effects.btn-close {
@@ -1205,7 +1205,7 @@ This file include css code conrespond for table and mobile device
 /* #Small Mobile */
 @media screen and (max-width: 320px) {
     .top-header{
-        background-size: cover;
+        background-size: contain;
         background: url(/Pictures/Picture33.jpg);
     }
     .swin-sc-testimonial.style-1 .main-slider .testi-item {
