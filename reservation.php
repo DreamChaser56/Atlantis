@@ -1,8 +1,33 @@
 
 <?php
-echo "<pre>";
-    print_r($_POST);
-echo"</pre>";
+  $messageSent = false;
+  if(isset($_POST['email']) && $_POST["email"] != ''){
+    if( filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+      print_r($_POST);
+      $userName = $_POST['name'];
+      $userEmail = $_POST['email'];
+      $userPeople = $_POST['people'];
+      $userDate = $_POST['date'];
+      $userTime = $_POST['time'];
+      $userMessage = $_POST['message'];
+      $messageSubject = "Reservation For".$userName.;
+
+      $to = "nsmith56263@gmail.com";
+      $body = "";
+
+      $body .= "From: ".$userName. "\r\n";
+      $body .= "Email: ".$userEmail. "\r\n";
+      $body .= "Number of People: ".$userPeople. "\r\n";
+      $body .= "Date: ".$userDate. "\r\n";
+      $body .= "Time: ".$userTime. "\r\n";
+      $body .= "Message: ".$userMessage. "\r\n";
+
+      mail($to,$messageSubject,$body);
+      
+      $messageSent = true;
+    }
+  }
+
 ?>
 
 
@@ -36,6 +61,9 @@ echo"</pre>";
     <link rel="stylesheet" type="text/css" href="assets/css/elements.css">
     <link rel="stylesheet" type="text/css" href="assets/css/extra.css">
     <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
+    <link rel="stylesheet" href="webform.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="main.js"></script>
     <!--link#colorpattern(rel='stylesheet', type='text/css', href='assets/css/color/colordefault.css')-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <!-- Google Font-->
@@ -48,6 +76,15 @@ echo"</pre>";
     <script src="assets/vendors/pageloading/sidebartransition/js/modernizr.custom.js"></script>
   </head>
   <body>
+    <?php
+      if($messageSent):
+    ?>
+
+    <h3> Your Reservation Has Been Sent </h3>
+
+    <?php
+      else:
+    ?>
     <div id="pagewrap" class="pagewrap">
       <div id="html-content" class="wrapper-content">
         <header class="header-transparent">
@@ -114,15 +151,15 @@ echo"</pre>";
                       </div>
                     </div>
                     <div class="swin-sc swin-sc-contact-form light mtl">
-                      <form action="" method="POST">
+                      <form action="reservation.php" method="POST">
                         <div class="form-group">
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                            <input type="text" placeholder="name" class="form-control">
+                            <input name="name" type="text" placeholder="name" class="form-control">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                            <input type="text" placeholder="Email" class="form-control">
+                            <input name="email" type="text" placeholder="Email" class="form-control">
                           </div>
                         </div>
                         <div class="form-group">
@@ -130,11 +167,11 @@ echo"</pre>";
                             <div class="input-group-addon">
                               <div class="fa fa-phone"></div>
                             </div>
-                            <input type="text" placeholder="Phone" class="form-control">
+                            <input name="phone" type="text" placeholder="Phone" class="form-control">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                            <select type="text" placeholder="People" class="form-control">
+                            <select type="text" name="people" placeholder="People" class="form-control">
                               <option>1 person</option>
                               <option>2 People</option>
                               <option>3 People</option>
@@ -151,13 +188,13 @@ echo"</pre>";
                         <div class="form-group">
                           <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                            <input type="text" placeholder="Date" class="form-control datepicker">
+                            <input name="date" type="text" placeholder="Date" class="form-control datepicker">
                           </div>
                           <div class="input-group">
                             <div class="input-group-addon">
                               <div class="fa fa-clock-o"></div>
                             </div>
-                            <select type="text" placeholder="Time" class="form-control">
+                            <select name="time" type="text" placeholder="Time" class="form-control">
                               <option>7:00 AM</option>
                               <option>8:00 AM</option>
                               <option>9:00 AM</option>
@@ -178,7 +215,7 @@ echo"</pre>";
                           </div>
                         </div>
                         <div class="form-group">
-                          <textarea class="form-control"></textarea>
+                          <textarea name="message" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                           <div class="swin-btn-wrap center"><a href="#" class="swin-btn center form-submit"><button type="submit" name="submit"> <span>Book Table</span></button></a></div>
@@ -191,6 +228,106 @@ echo"</pre>";
                 <php if ($mail_reservation_status != '') {
                   echo $mail_reservation_status;
                 }> 
+              </div>
+            </section>
+            <section>
+              <div class="container">
+                <form method="post" action="/" id="contact">
+                  <div class="form-body">
+                  
+                  <div class="section">
+                    <label for="guestname" class="field-label">Please Enter Your Name</label>
+                    <label for="guestname" class="field prepend-icon">
+                      <input type="text" name="guestname" id="guestname" class="gui-input" required="" placeholder="John Doe/Jane Doe">
+                      <span class="field-icon"><i class="fa fa-user"></i></span>  
+                    </label>
+                  </div>           
+                  <div class="frm-row">
+                    <div class="section colm colm6">
+                      <label for="guestemail" class="field-label">Email Address</label>
+                      <label for="guestemail" class="field prepend-icon">
+                        <input type="email" name="guestemail" id="guestemail" class="gui-input" required="" placeholder="john@something.com">
+                        <span class="field-icon"><i class="fa fa-envelope"></i></span>  
+                      </label>
+                    </div>
+                    <div class="section colm colm6">
+                      <label for="guestelephone" class="field-label">Telephone / Mobile</label>
+                      <label for="guestelephone" class="field prepend-icon">
+                        <input type="text" name="guestelephone" id="guestelephone" class="gui-input" required="" placeholder="Telephone / Moble Number">
+                        <span class="field-icon"><i class="fa fa-phone-square"></i></span>  
+                      </label>
+                    </div>
+                  </div>
+                  <div class="frm-row">
+                    <div class="section colm colm6">
+                      <label for="adults" class="field-label">Number of Adults</label>
+                      <label for="adults" class="field prepend-icon">
+                        <input type="number" id="adults" name="adults" class="gui-input" required="" placeholder="Number of adults">
+                        <span class="field-icon"><i class="fa fa-users"></i></span>  
+                      </label>
+                    </div>
+                    <div class="section colm colm6">
+                      <label for="children" class="field-label">Number of Children</label>
+                      <label for="children" class="field prepend-icon">
+                        <input type="number" id="children" name="children" class="gui-input" required="" placeholder="Number of children">
+                        <span class="field-icon"><i class="fa fa-users"></i></span>  
+                      </label>
+                    </div>
+                  </div>
+                  <div class="frm-row">
+                    <div class="section colm colm6">
+                      <label for="checkin" class="field-label">Check-in Date</label>
+                      <label for="checkin" class="field prepend-icon">
+                        <input type="text" id="checkin" name="checkin" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                        <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                      </label>
+                    </div>
+                    <div class="section colm colm6">
+                      <label for="checkout" class="field-label">Check-out Date</label>
+                      <label for="checkout" class="field prepend-icon">
+                        <input type="text" id="checkout" name="checkout" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                        <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                      </label>
+                    </div>
+                  </div>
+                  <div class="spacer-t20 spacer-b30">
+                    <div class="tagline"><span>Please answer these questions for a pleasant stay</span></div>
+                  </div>
+                  <div class="frm-row">
+                    <div class="option-group field">
+                      <div class="section colm colm6">
+                        <label class="switch">
+                          <input type="checkbox" name="switch1" id="switch1" value="switch1">
+                          <span class="switch-label" data-on="YES" data-off="NO"></span>
+                          <span>Will you be bringing a pet?</span>
+                        </label>
+                      </div> 
+                      <div class="section colm colm6">
+                        <label class="switch">
+                          <input type="checkbox" name="switch2" id="switch2" value="switch2">
+                          <span class="switch-label" data-on="YES" data-off="NO"></span>
+                          <span>Do you need us to pick you up?</span>
+                        </label>
+                      </div>        
+                    </div>
+                  </div> 
+                  <div class="section">
+                    <label for="comment" class="field-label">Anything else we should know about?</label>
+                    <label for="comment" class="field prepend-icon">
+                      <textarea class="gui-textarea" id="comment" name="comment" placeholder="Let us know about any special accommodation needs"></textarea>
+                      <span class="field-icon"><i class="fa fa-comments"></i></span>
+                      <span class="input-hint"> 
+                        <strong>Please:</strong> Be as descriptive as possible
+                      </span>   
+                    </label>
+                  </div>
+                </div>
+                <div class="form-footer">
+                  <button type="submit" class="button btn-primary">Confirm Booking</button>
+                  <button type="reset" class="button">Cancel</button>
+                </div>
+
+                </form>
               </div>
             </section>
 
@@ -338,6 +475,9 @@ echo"</pre>";
         </div>
       </div>
     </div>
+    <?php
+    endif
+    ?>
     <!-- jQuery-->
     <script src="assets/vendors/jquery-1.10.2.min.js"></script>
     <!-- Bootstrap JavaScript-->
